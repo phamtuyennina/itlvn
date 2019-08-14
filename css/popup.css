@@ -1,0 +1,34 @@
+div.login-popup
+{	
+	position:fixed;
+	top:50%;
+	left:50%;
+	z-index:999;
+	display:none;
+	width:90%;
+	min-width:250px;
+	max-width:700px;	
+}
+div.close-popup
+{
+	position:absolute;
+	top:0px;
+	right:0px;
+	width:35px;
+	height:35px;
+	cursor:pointer;
+	z-index:999;
+	background:url(../images/fancybox_sprite.png) center top;
+}
+div#baophu
+{
+	background:#000;
+	opacity:0.8;
+	z-index:998;
+	left:0px;
+	top:0px;
+	position:fixed;
+	width:100%;
+	height:100%;
+	display:block;
+}

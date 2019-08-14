@@ -1,0 +1,230 @@
+
+.shop{
+    /* background: rgba(255, 255, 255, 0.3); */
+}
+.w50
+{
+	width:50%;
+	float:left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.w51 {
+    width: 49%;
+    float: left;
+    min-height: 1px;
+    margin-right: 2%;
+}
+.w51:last-child{display: none}
+div.bill_form .form-group{margin-left:0px !important;margin-right:0px !important;}
+div.cus-info
+{
+	width:100% !important;
+}
+.nopad
+{
+	padding:0px !important;
+}
+select.sl
+{
+	border-radius:0px;
+}
+.shop .title{border-bottom:1px solid #ccc;margin-bottom:20px;font-weight:bold;font-size:17px}
+#giohang{
+	font-family:UTMAvo;
+}
+#box-payment .payment-button{}
+#box-payment .back-home,#box-payment .payment-button button{
+-webkit-box-shadow: 0px 1px 2px 0px rgba(50, 50, 50, 0.44);
+-moz-box-shadow:    0px 1px 2px 0px rgba(50, 50, 50, 0.44);
+box-shadow:         0px 1px 2px 0px rgba(50, 50, 50, 0.44);
+    background: rgb(247, 48, 94);
+    border: 0;
+    padding: 4px 10px;
+    border-radius: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: bold;
+}
+#giohang input {
+    font-size: 17px;
+}
+h3.all-cart-price {
+    margin-left: 10px;
+    font-size: 22px;
+    color: #000;
+    padding: 10px 0px;
+}
+#box-payment .payment-button button i{}
+#giohang a{color: #000;}
+#giohang a.name{
+	color: #000;
+	font-size: 17px;
+	/* font-family: roboto; */
+	text-align: center;
+	}
+#giohang a.name:hover{color:#F7305E;}
+#giohang .price-total{
+    font-size: 16px;
+    color: #000;
+}
+#giohang .price-old{
+    font-size: 14px;
+    text-decoration: line-through;
+    color: red;
+}
+.from-thanhtoan label{
+    font-weight: normal;
+    /* font-size: 15px; */
+}
+
+.from-thanhtoan input[type=text],.from-thanhtoan input[type=email],.from-thanhtoan button,.from-thanhtoan textarea{
+    border-radius: 0;
+    height: 29px;
+    padding: 7px;
+}
+.from-thanhtoan textarea{height: auto;}
+#giohang .price-real{
+    font-size: 16px;
+}
+#giohang thead{
+    background: #fff;
+
+    font-size: 17px;
+}
+#giohang thead th{ text-align: center; font-size: 16px; font-weight: normal; text-transform: capitalize; padding: 3px 0; }
+
+#giohang td{
+    border-bottom: 0;
+    /* white-space: nowrap; */
+}
+#giohang td.total_cart_max{
+    text-align: right;
+    font-size: 17px;
+    color: red;
+}
+#giohang td.total_cart_max div{
+    text-align: right;
+    display: block;
+    padding: 0 4px;
+}
+#giohang td.total_cart_max div span.price{
+    width: 105px;
+}
+.shop  .button,.shop  .xbtn{background: #fff;      border: 1px solid #ccc;padding: 5px 9px;      font-weight: bold;margin: 4px;/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9fcf7+0,f5f9f0+100;L+Green+3D */  background: rgb(249,252,247); /* Old browsers */  background: -moz-linear-gradient(top,  rgba(249,252,247,1) 0%, rgba(245,249,240,1) 100%); /* FF3.6-15 */  background: -webkit-linear-gradient(top,  rgba(249,252,247,1) 0%,rgba(245,249,240,1) 100%); /* Chrome10-25,Safari5.1-6 */  background: linear-gradient(to bottom,  rgba(249,252,247,1) 0%,rgba(245,249,240,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9fcf7', endColorstr='#f5f9f0',GradientType=0 ); /* IE6-9 */font-size: 15px;text-transform: capitalize;border-radius: 0;}
+#nav-cart{margin:10px 0}
+.shop .button:hover{
+    border-radius: 0;
+}
+#nav-cart hr{
+    margin: 7px 0;
+}
+#nav-cart .cart-price{
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+#box-payment  .cart-title{
+    background: rgb(247, 48, 94);
+
+    padding: 6px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #fff;
+}
+#box-payment .wrap{    padding: 5px;}
+.box-pink{/* border: 1px solid rgba(204, 204, 204, 0.45); */}
+#box-payment .box-information{
+
+    -webkit-box-shadow: 0px 1px 2px 0px rgba(50, 50, 50, 0.44);
+-moz-box-shadow:    0px 1px 2px 0px rgba(50, 50, 50, 0.44);
+box-shadow:         0px 1px 2px 0px rgba(50, 50, 50, 0.44);
+
+
+    /* border-radius: 7px; */
+
+    overflow: hidden;
+
+    margin-bottom: 10px;
+
+}
+#box-payment .box-information .hint{
+    font-weight: bold;
+}
+#box-payment .box-information label{
+    font-size: 18px;
+    font-weight: normal;
+}
+#box-payment .box-information input{
+    border-radius: 0;
+}
+#box-payment .box-information select{
+    border-radius: 0;
+}
+#box-payment .box-information textarea{
+    border-radius: 0;
+    height: 100px;
+}
+
+.cus-info .desc{    margin: 10px auto;
+    padding: 8px 4px;
+    background-color: #DAEEF3;
+    border: 1px solid #B8CCE4;}
+
+@media (max-width: 480px){
+	.content, #main_content {
+    padding: 0px !important;
+}
+#giohang thead th {
+    text-align: center;
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: none;
+    padding: 3px 0;
+}
+#giohang .price-old {
+    font-size: 12px;
+    text-decoration: line-through;
+    color: red;
+}
+#giohang a.name {
+    color: #000;
+    font-size: 13px;
+    /* font-family: roboto; */
+    text-align: center;
+}
+#giohang .price-total {
+    font-size: 13px;
+    color: #000;
+}
+#giohang .price-real {
+    font-size: 13px;
+}
+.table#giohang>tbody>tr>td{padding:2px;}
+h3.all-cart-price {
+    margin-left: 10px;
+    font-size: 16px;
+    color: #000;
+    padding: 10px 0px;
+}
+.shop .button, .shop .xbtn {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 5px 4px;
+    font-weight: bold;
+    margin: 3px 1px;
+    background: rgb(249,252,247);
+    background: -moz-linear-gradient(top, rgba(249,252,247,1) 0%, rgba(245,249,240,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(249,252,247,1) 0%,rgba(245,249,240,1) 100%);
+    background: linear-gradient(to bottom, rgba(249,252,247,1) 0%,rgba(245,249,240,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9fcf7', endColorstr='#f5f9f0',GradientType=0 );
+    font-size: 13px;
+    text-transform: capitalize;
+    border-radius: 0;
+}
+}

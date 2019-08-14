@@ -1,0 +1,92 @@
+
+
+.captionOrange, .captionBlack
+{
+	color: #fff;
+	font-size: 20px;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 4px;
+}
+.captionOrange
+{
+	background: #EB5100;
+	background-color: rgba(235, 81, 0, 0.6);
+}
+.captionBlack
+{
+	font-size:16px;
+	background: #000;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+a.captionOrange, A.captionOrange:active, A.captionOrange:visited
+{
+	color: #ffffff;
+	text-decoration: none;
+}
+a.captionOrange:hover
+{
+	color: #eb5100;
+	text-decoration: underline;
+	background-color: #eeeeee;
+	background-color: rgba(238, 238, 238, 0.7);
+}
+
+.jssora05l{
+	display: block;
+	position: absolute;
+	width: 40px;
+	height: 50px;
+	cursor: pointer;
+	background: url(../images/next.png) no-repeat;
+	overflow: hidden;
+	left:0px;
+}
+.jssora05r {
+		display: block;
+		position: absolute;
+		width: 40px;
+		height: 50px;
+		cursor: pointer;
+		background: url(../images/prev.png) no-repeat;
+		overflow: hidden;
+		right:0px;
+}
+.jssora05l.jssora05ldn { background-position: -250px -40px; }
+.jssora05r.jssora05rdn { background-position: -310px -40px; }
+
+
+/*----------- css capion -----------*/
+.caption-box{
+	width:529px;
+	height:138px;
+	background:url(../images/bg-caption.png) no-repeat center right;
+	position:absolute;
+	bottom:30px;
+	right:0px;
+	}
+.caption-box .name-cap{
+	text-transform:uppercase;
+	font-size:19px;
+	padding-left:100px;
+	padding-right:50px;
+	display:table;
+	height:40px;
+	line-height:40px;
+	color:#fff;
+	text-decoration:none;
+	margin-top:-20px;
+	background:url(../images/name-caption.png) no-repeat center left;
+	background-size:100% 40px;
+	min-width:200px;
+	}
+.caption-box .mota-caption{
+	padding:25px 20px 20px 60px;
+	color:#fff;
+	font-size:16px;
+	line-height:25px;
+	text-align:justify;
+	height:100px;
+	overflow:hidden;
+	box-sizing:border-box;
+	}

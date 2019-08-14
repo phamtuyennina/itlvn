@@ -1,0 +1,332 @@
+.box_container
+{
+}
+.box_container .content
+{
+	padding:10px 0px;
+}
+.dangky
+{
+	width: 49%;
+    float: left;
+
+}
+.dangky_frm
+{
+
+    padding: 10px 20px;
+    position: relative;
+    border: 1px solid #D6D6D6;
+    margin-top: 10px;
+	box-sizing:border-box;
+}
+div.dangnhap
+{
+	float:right;
+	width:49%;
+	position:relative;
+}
+div.tieude_dangky
+{
+	position: absolute;
+    background: #F7F7F7;
+    padding: 3px 15px;
+    top: -16px;
+    left: 20px;
+    border: 1px solid #D6D6D6;
+    font-size: 13px;
+}
+div.tieude_dangnhap
+{
+    border-bottom: 1px solid #D6D6D6;
+	line-height:35px;
+	margin-bottom:10px;
+	 font-size: 13px;
+}
+.popup_thongbao
+{
+	width: 300px;
+    background: #fff;
+    text-align: center;
+    border: 1px solid #D0CFCF;
+	 font-size: 13px;
+}
+.popup_thongbao .tieude_tb
+{
+	background: #E80019;
+    padding: 7px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+
+}
+.popup_thongbao .popup_kq
+{
+	padding: 10px;
+    font-weight: bold;
+    color: #4C4C4C;
+}
+/*Form liên hệ*/
+div.frm_lienhe
+{
+	margin:10px 0px 10px 0px;
+	font-size:13px;
+}
+.thongbao
+{
+	font-size: 20px;
+    color: red;
+    position: absolute;
+    top: 35%;
+    width: 100%;
+    text-align: center;
+}
+.thongbao p
+{
+	text-align:center;
+}
+div.frm_lienhe .item_lienhe
+{
+	margin:8px 0px;
+}
+div.frm_lienhe .item_lienhe_b
+{
+	text-align:center;
+}
+div.frm_lienhe .item_lienhe p
+{
+	float:left;
+	min-width:120px;
+}
+div.dangky .item_lienhe p
+{
+	clear:both;
+	float:none;
+}
+#reset_capcha img
+{
+	float:left;
+	margin:5px 10px;
+}
+.baove
+{
+	float:left !important;
+}
+div.frm_lienhe .item_lienhe span
+{
+	color:red;
+	margin-left:3px;
+}
+div.frm_lienhe .item_lienhe input[type='text'],div.frm_lienhe .item_lienhe textarea,div.frm_lienhe .item_lienhe input[type='password'],div.frm_lienhe .item_lienhe select
+{
+
+	width: 63%;
+    padding: 5px 10px;
+    border: 1px solid #D6D6D6;
+    box-sizing: border-box;
+    background: #F7F7F7;
+
+}
+div.dangky_frm .item_lienhe input[type='text'],div.dangky_frm .item_lienhe textarea,div.dangky_frm .item_lienhe input[type='password'],div.dangky_frm .item_lienhe select
+{
+	width: 100%;
+}
+
+div.frm_lienhe .item_lienhe input[type='button'],div.frm_lienhe .item_lienhe input[type='reset'],div.frm_lienhe .item_lienhe input[type='submit']
+{
+	padding:7px 25px;
+	background:#ee0303;
+	border:none;
+	color:#fff;
+	border-radius:3px;
+	margin:10px 0px;
+	font-size:12px;
+	cursor:pointer;
+	box-sizing: border-box;
+	    text-transform: uppercase;
+}
+.btn_dangnhap
+{
+	padding:7px 25px;
+	background:#ee0303;
+	border:none;
+	display:block;
+	color:#fff;
+	border-radius:3px;
+	margin:10px 0px;
+	cursor:pointer;
+	box-sizing: border-box;
+	text-transform: uppercase;
+text-decoration:none;
+float:left;
+margin-right:5px;
+}
+.date
+{
+	background:#F7F7F7 url(../images/i_date.png) 98% center no-repeat !important;
+	padding-right: 8%;
+	cursor:pointer;
+}
+#tendangnhap
+{
+	background:#F7F7F7 url(../images/i_user.png) 2% center no-repeat !important;
+	padding-left: 8%;
+}
+#matkhau,#nhaplaimatkhau,#matkhaucu
+{
+	background:#F7F7F7 url(../images/i_pass.png) 2% center no-repeat !important;
+	padding-left: 8%;
+}
+/*Form liên hệ*/
+
+/*css tin tức*/
+.box_news
+{
+  	padding:12px 0;
+	border-bottom:1px dashed #C6C6C6;
+	width:100%;
+}
+.box_news h3 a
+{
+	font-size:16px;
+	color:#2A00FF;
+	font-weight:normal;
+	margin-bottom:6px;
+	transition:0.4s;
+	text-decoration:none;
+}
+.box_news h3 a:hover
+{
+	color:#F00;
+	transition:0.4s;
+}
+.box_news a.chitiet
+{
+	color:#00F;
+}
+.box_news a
+{
+	text-decoration:none;
+}
+
+.box_news a img
+{
+  float:left;
+  margin:4px 15px 3px 0px;
+  width:170px;
+  transition:1s;
+  border:1px solid #DCDCDC;
+}
+.box_news a img:hover
+{
+	opacity:0.4;
+	transition:1s;
+}
+.othernews
+{
+	border: 1px solid #DEDEDE;
+    padding: 5px;
+    background: #F7F7F7;
+}
+.othernews .cactinkhac
+{
+	font-size:20px;
+	color:#0066FF;
+}
+.othernews ul.phantrang
+{
+	list-style:none;
+	margin-left:15px;
+}
+.othernews ul.phantrang li
+{
+	background:url(../images/i_tinkhac.png) left 3px no-repeat;
+	padding:3px 5px 3px 18px;
+	color:#AAAAAA;
+}
+.othernews ul.phantrang li a
+{
+	color:#4A4A4A;
+	text-decoration:none;
+	transition:0.4s;
+}
+.othernews ul.phantrang li a:hover
+{
+	color:red;
+	padding-left:10px;
+	transition:0.4s;
+}
+/*css tin tức*/
+
+/*----------css bản đồ-------------*/
+#map_canvas {
+    height: 500px;
+    width: 100%;
+	margin:0px auto;
+	border:1px solid #BBB;
+}
+#map_canvas iframe{width: 100%;height: 100%;}
+.map_description {
+    color: #000000;
+    overflow: auto;
+    max-width: 300px;
+}
+.map_title {
+    color: #30A602;
+    font-weight: bold;
+}
+/*----------css bản đồ-------------*/
+
+/*----------Phân trang-------------*/
+.pagination {
+	margin: auto !important;
+	width: 100%;
+	text-align: center;
+	margin-top: 10px !important;
+}
+.pages {
+}
+.pages li.prev {
+	margin-right: 15px;
+}
+.pages li.next {
+	margin-left: 15px;
+}
+.pages li {
+	display: inline-block;
+	margin: 5px 2px;
+}
+.pages li a {
+	height: 25px;
+	padding: 4px 8px;
+	text-decoration: none;
+	color: #666666;
+	font-weight: bold;
+	border: 1px solid #d5d5d5;
+	font-size: 11px;
+}
+.pages li a:hover {
+	background: #f6f6f6;
+}
+.pages li .active {
+	background:#424852;
+	color: #fff;
+	border-color: #424852;
+	pointer-events: none
+}
+.pages li .active:hover {
+	background: #2a313d;
+}
+/*----------Phân trang-------------*/
+
+/*----------Loading-------------*/
+#pre-loader{background: #F5F5F5;position: fixed;top: 0;left: 0;width: 100%;height: 100%;z-index: 9999;}
+#pre-loader #wrap{position: absolute;top: 0;left: 0;right: 0;bottom: 0;margin: auto;display: block;text-align: center;width: 100px; height: 30px;}
+#preloader_1{position:relative;}
+#preloader_1 span{display:block;bottom:0px;width: 9px;height: 5px;background:#9b59b6;position:absolute;animation: preloader_1 1.5s  infinite ease-in-out;}
+#preloader_1 span:nth-child(2){left:11px;animation-delay: .2s; }
+#preloader_1 span:nth-child(3){left:22px;animation-delay: .4s;}
+#preloader_1 span:nth-child(4){left:33px;animation-delay: .6s;}
+#preloader_1 span:nth-child(5){left:44px;animation-delay: .8s;}
+@keyframes preloader_1 {0% {height:5px;transform:translateY(0px);background:#9b59b6;}25% {height:30px;transform:translateY(15px);background:#3498db;}50% {height:5px;transform:translateY(0px);background:#9b59b6;}100% {height:5px;transform:translateY(0px);background:#9b59b6;}}
+/*----------Loading-------------*/
