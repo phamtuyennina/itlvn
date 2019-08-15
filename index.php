@@ -17,7 +17,7 @@
 	include_once _lib."breadcrumb.php";
 	include_once _lib."file_requick.php";
 	include_once _source."counter.php";
-
+echo 'a';
 ?>
 <!doctype html>
 <html lang="vi">
