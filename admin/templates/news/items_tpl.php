@@ -156,11 +156,11 @@ function get_main_category()
       <tr>
         <td></td>
         <td class="tb_data_small"><a href="#" class="tipS" style="margin: 5px;">Thứ tự</a></td>     
-        <td class="tb_data_small"><?=get_main_danhmuc()?></td>
+        <td class="tb_data_small <?php if(!in_array($_GET['type'],array('tin-tuc','giai-phap-kinh-doanh'))){echo 'none';} ?>"><?=get_main_danhmuc()?></td>
         <td class="tb_data_small none"><?=get_main_list()?></td>
         <td class="tb_data_small none"><?=get_main_category()?></td>
         <td class="sortCol"><div>Tên bài viết<span></span></div></td>
-         <td class="tb_data_small">Nổi bật</td>
+         <td class="tb_data_small <?php if(!in_array($_GET['type'],array('tin-tuc'))){echo 'none';} ?>">Nổi bật</td>
          
         <td class="tb_data_small">Ẩn/Hiện</td>
         <td width="200">Thao tác</td>
@@ -179,7 +179,7 @@ function get_main_category()
             <input data-val0="<?=$items[$i]['id']?>" data-val2="table_<?=$_GET['com']?>" data-val3="stt" onblur="stt(this)" type="text" value="<?=$items[$i]['stt']?>" name="ordering[]" onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" class="tipS smallText update_stt" original-title="Nhập số thứ tự bài viết" rel="<?=$items[$i]['id']?>" />
 
         </td> 
-         <td align="center">
+         <td align="center" class="<?php if(!in_array($_GET['type'],array('tin-tuc','giai-phap-kinh-doanh'))){echo 'none';} ?>">
 			<?php
 				$sql_danhmuc="select ten from table_news_danhmuc where id='".$items[$i]['id_danhmuc']."'";
 				$result=mysql_query($sql_danhmuc);
@@ -210,7 +210,7 @@ function get_main_category()
             <a href="index.php?com=news&act=edit&id=<?=$items[$i]['id']?>&type=<?=$_REQUEST['type']?>&id_danhmuc=<?=$items[$i]['id_danhmuc']?>&id_list=<?=$items[$i]['id_list']?>&id_cat=<?=$items[$i]['id_cat']?>&hienthi=<?=$items[$i]['hienthi']?><?php if($_REQUEST['p']!='') echo'&p='.$_REQUEST['p'];?>" class="tipS SC_bold"><?=$items[$i]['ten']?></a>
         </td>
 
-        <td align="center">
+        <td align="center" class="<?php if(!in_array($_GET['type'],array('tin-tuc'))){echo 'none';} ?>">
         <a data-val2="table_<?=$_GET['com']?>" rel="<?=$items[$i]['noibat']?>" data-val3="noibat" class="diamondToggle <?=($items[$i]['noibat']==1)?"diamondToggleOff":""?>" data-val0="<?=$items[$i]['id']?>" ></a> 
         </td>
 

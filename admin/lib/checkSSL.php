@@ -1,14 +1,11 @@
-<?php
+<?php 
 
-//$config['arrayDomainSSL']=array("yourdomainssl.com.vn"); // copy dong nay vao file config.php và cấu hình cho những domain cài ssl
-
+ $Protocol=getProtocol();///  biến nhận về giao thức truy cập để cấu hình các đường dẩn base url ,css,js...
 
 function redirectphp($url){
 	header("HTTP/1.1 301 Moved Permanently");
 	header("Location: $url");
-}
-
- 
+} 
 
 function getCurrentPageURLSSL() {
     $pageURL = 'http';
@@ -18,6 +15,13 @@ function getCurrentPageURLSSL() {
     return $pageURL;
 }
 
+function getProtocol() {
+    $pageURL = 'http';
+    if ($_SERVER["HTTPS"] == "on") {$pageURL .= "s";}
+    $pageURL .= "://";
+    return $pageURL;
+}
+ 
 function checkTimeSSL($domainName){
 	$url = $domainName;
 	$orignal_parse = parse_url($url, PHP_URL_HOST);
@@ -50,17 +54,20 @@ function CheckChangSLL($runDomainName,$arrayConfig){
  	$NgayHienTai=date('d-m-Y',time());
 	$soNgayConLaitInt=$timeSLL- strtotime($NgayHienTai);
 	$soNgayConLai=(int)($soNgayConLaitInt/24/60/60);
+
+ 
+
 	$DomainRun=$_SERVER["SERVER_NAME"];
 	if(in_array($DomainRun,$arrayConfig)){	  
 	  	$flagdomain=1;
 	}else{
 	    $flagdomain=0;
 	  	$runDomainName='http://'.$arrayConfig['0'];
-	  }
+	 }
 
 	$arrayDomain=explode("://",$runDomainName);  
  
-	if($soNgayConLai >3 && $version>0){	
+	if($soNgayConLai >=1 && $version>0){
 		changeDomainssl($runDomainName);	
 	}else{
 		if($flagdomain==0){
@@ -69,7 +76,24 @@ function CheckChangSLL($runDomainName,$arrayConfig){
 				$DomainRuning=$_SERVER["SERVER_NAME"];
 				$urlRun=str_replace($DomainRuning,$runDomainName,$geturl);					
 				$urlRun=str_replace('http://','',$urlRun);
-				$urlRun="https://".$urlRun;
+				// check  time 
+				$arrayinfossl=checkTimeSSL($runDomainName);
+				$timeSLL=$arrayinfossl['songay'];
+				$version=$arrayinfossl['version'];
+
+			 	$NgayHienTai=date('d-m-Y',time());
+				$soNgayConLaitInt=$timeSLL- strtotime($NgayHienTai);
+				$soNgayConLai=(int)($soNgayConLaitInt/24/60/60);
+				// end check time 
+			 
+				if($soNgayConLai >=1 && $version>0){
+				 	$urlRun="https://".$urlRun;
+				 	
+				}else{
+					$urlRun="http://".$urlRun;
+				}
+
+				
 
 				redirectphp($urlRun);
 			}else{					
@@ -85,5 +109,6 @@ function CheckChangSLL($runDomainName,$arrayConfig){
 
 // run main 
 $runDomainName=getCurrentPageURLSSL(); // cấu hình domain  
+
 CheckChangSLL($runDomainName,$config['arrayDomainSSL']);
 ?>

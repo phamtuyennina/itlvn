@@ -195,6 +195,8 @@ function save_item(){
 		$data['keywords'] = $_POST['keywords'];
 		$data['description'] = $_POST['description'];
 		foreach ($config['lang'] as $key => $value) {
+			$data['write_by'.$key] = $_POST['write_by'.$key];
+			$data['chucvu'.$key] = $_POST['chucvu'.$key];
 			$data['ten'.$key] = $_POST['ten'.$key];
 			$data['mota'.$key] = magic_quote($_POST['mota'.$key]);
 			$data['noidung'.$key] = magic_quote($_POST['noidung'.$key]);			
@@ -286,6 +288,8 @@ function save_item(){
 		$data['keywords'] = $_POST['keywords'];
 		$data['description'] = $_POST['description'];
 		foreach ($config['lang'] as $key => $value) {
+			$data['write_by'.$key] = $_POST['write_by'.$key];
+			$data['chucvu'.$key] = $_POST['chucvu'.$key];
 			$data['ten'.$key] = $_POST['ten'.$key];
 			$data['mota'.$key] = magic_quote($_POST['mota'.$key]);
 			$data['noidung'.$key] = magic_quote($_POST['noidung'.$key]);			
@@ -293,8 +297,8 @@ function save_item(){
 		
 		$d->setTable('news');
 		if($d->insert($data)){
-			 $id=mysql_insert_id();
-			 $type=$_POST['type'];
+			$id=mysql_insert_id();
+			$type=$_POST['type'];
 			mysql_query("DELETE FROM table_protag where id_pro = '$id'");
 			if(trim($_POST['tag'])!=''){
 			  $arrTags = explode(",", $_POST['tag']);

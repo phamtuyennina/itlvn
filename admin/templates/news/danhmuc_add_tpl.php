@@ -34,7 +34,7 @@
        </ul>
 
        <div id="info" class="tab_content">
-    <div class="formRow">
+    <div class="formRow <?php if($_GET['type']!='giai-phap-kinh-doanh'){echo 'none';} ?>">
 			<label>Tải hình ảnh:</label>
 			<div class="formRight">
             	<input type="file" id="file" name="file" />
@@ -44,7 +44,7 @@
 			<div class="clear"></div>
 		</div>
          <?php if($_GET['act']=='edit_danhmuc'){?>
-		<div class="formRow">
+		<div class="formRow <?php if($_GET['type']!='giai-phap-kinh-doanh'){echo 'none';} ?>">
 			<label>Hình Hiện Tại :</label>
 			<div class="formRight">
 			

@@ -139,7 +139,7 @@ function get_main_category()
        </ul>
 
        <div id="info" class="tab_content">
-		<div class="formRow">
+		<div class="formRow <?php if(!in_array($_GET['type'],array('tin-tuc','giai-phap-kinh-doanh'))){echo 'none';} ?>">
 			<label>Chọn danh mục 1</label>
 			<div class="formRight">
 			<?=get_main_danhmuc()?>
@@ -162,17 +162,24 @@ function get_main_category()
 		</div>
 
          
-        <div class="formRow">
+        <div class="formRow <?php if($_GET['type']=='huong-dan-hoi-dap'){echo 'none';} ?>">
 			<label>Tải hình ảnh:</label>
 			<div class="formRight">
             	<input type="file" id="file" name="file" />
 				<img src="./images/question-button.png" alt="Upload hình" class="icon_question tipS" original-title="Tải hình ảnh (ảnh JPEG, GIF , JPG , PNG)">
-				<div class="note"> Height:130px | Width:130px  <?=_format_duoihinh_l?> </div>
+				
+        <?php if($_GET['type']=='phan-hoi-khach-hang'){ ?>
+        <div class="note"> Height:150px | Width:150px  <?=_format_duoihinh_l?> </div>
+        <?php }else if($_GET['type']=='khu-vuc'){?>
+        <div class="note"> Height:500px | Width:1100px  <?=_format_duoihinh_l?> </div>
+        <?php }else{?>
+        <div class="note"> Height:450px | Width:650px  <?=_format_duoihinh_l?> </div>
+        <?php }?>
 			</div>
 			<div class="clear"></div>
 		</div>
          <?php if($_GET['act']=='edit'){?>
-		<div class="formRow">
+		<div class="formRow <?php if($_GET['type']=='huong-dan-hoi-dap'){echo 'none';} ?>">
 			<label>Hình Hiện Tại :</label>
 			<div class="formRight">
 			
@@ -214,7 +221,7 @@ function get_main_category()
             </div>
             <div class="clear"></div>
         </div>
- 	<div class="formRow <?php if($_GET['type']=='khu-vuc'){echo 'none';} ?>">
+ 	<div class="formRow <?php if($_GET['type']=='khu-vuc' or $_GET['type']=='huong-dan-hoi-dap' or $_GET['type']=='phan-hoi-khach-hang'){echo 'none';} ?>">
             <label>Title</label>
             <div class="formRight">
                 <input type="text" value="<?=@$item['title']?>" name="title" title="Nội dung thẻ meta Title dùng để SEO" class="tipS" />
@@ -222,7 +229,7 @@ function get_main_category()
             <div class="clear"></div>
         </div>
         
-        <div class="formRow <?php if($_GET['type']=='khu-vuc'){echo 'none';} ?>">
+        <div class="formRow <?php if($_GET['type']=='khu-vuc' or $_GET['type']=='huong-dan-hoi-dap' or $_GET['type']=='phan-hoi-khach-hang'){echo 'none';} ?>">
             <label>Từ khóa</label>
             <div class="formRight">
                 <input type="text" value="<?=@$item['keywords']?>" name="keywords" title="Từ khóa chính cho bài viết" class="tipS" />
@@ -230,7 +237,7 @@ function get_main_category()
             <div class="clear"></div>
         </div>
         
-        <div class="formRow <?php if($_GET['type']=='khu-vuc'){echo 'none';} ?>">
+        <div class="formRow <?php if($_GET['type']=='khu-vuc' or $_GET['type']=='huong-dan-hoi-dap' or $_GET['type']=='phan-hoi-khach-hang'){echo 'none';} ?>">
             <label>Description:</label>
             <div class="formRight">
                 <textarea rows="8" cols="" title="Nội dung thẻ meta Description dùng để SEO" class="tipS description_input" name="description"><?=@$item['description']?></textarea>
@@ -239,7 +246,7 @@ function get_main_category()
             <div class="clear"></div>
         </div>
         
-        <div class="formRow <?php if($_GET['type']!='tin-tuc'){echo 'none';} ?>">
+        <div class="formRow <?php if(!in_array($_GET['type'],array('tin-tuc'))){echo 'none';} ?>">
           <label>Nổi bật : <img src="./images/question-button.png" alt="Chọn loại" class="icon_que tipS" original-title="Bỏ chọn để không hiển thị danh mục này ! "> </label>
 
          <div class="formRight">
@@ -273,15 +280,31 @@ function get_main_category()
         ?>
 
        <div id="content_lang_<?=$key?>" class="tab_content">        
-            <div class="formRow">
+        <div class="formRow">
             <label>Tên bài viết</label>
             <div class="formRight">
                 <input type="text" name="ten<?=$key?>" title="Nhập tên bài viết" id="ten<?=$key?>" class="tipS" value="<?=@$item['ten'.$key]?>" />
             </div>
             <div class="clear"></div>
+        </div>
+
+        <div class="formRow <?php if($_GET['type']!='phan-hoi-khach-hang'){echo 'none';} ?>">
+            <label>Viết bởi</label>
+            <div class="formRight">
+                <input type="text" name="write_by<?=$key?>" title="" id="write_by<?=$key?>" class="tipS" value="<?=@$item['write_by'.$key]?>" />
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="formRow <?php if($_GET['type']!='phan-hoi-khach-hang'){echo 'none';} ?>">
+            <label>Chức vụ</label>
+            <div class="formRight">
+                <input type="text" name="chucvu<?=$key?>" title="" id="chucvu<?=$key?>" class="tipS" value="<?=@$item['chucvu'.$key]?>" />
+            </div>
+            <div class="clear"></div>
         </div>  
 
-        <div class="formRow <?php if($_GET['type']=='khu-vuc'){echo 'none';} ?>">
+        <div class="formRow <?php if($_GET['type']=='khu-vuc' or $_GET['type']=='huong-dan-hoi-dap'){echo 'none';} ?>">
             <label>Mô tả ngắn:</label>
             <div class="formRight">
                 <textarea  rows="8" cols="" title="Viết mô tả ngắn bài viết" class="tipS" name="mota<?=$key?>" id="mota<?=$key?>"><?=@$item['mota'.$key]?></textarea>
@@ -289,7 +312,7 @@ function get_main_category()
             <div class="clear"></div>
         </div>  
 
-            <div class="formRow">
+            <div class="formRow <?php if($_GET['type']=='phan-hoi-khach-hang'){echo 'none';} ?>">
             <label>Nội dung chính: <img src="./images/question-button.png" alt="Chọn loại"  class="icon_que tipS" original-title="Viết nội dung chính"> </label>
             <div class="formRight"><textarea class="ck_editor" name="noidung<?=$key?>" id="noidung<?=$key?>" rows="8" cols="60"><?=@$item['noidung'.$key]?></textarea>
 </div>

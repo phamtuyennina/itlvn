@@ -33,7 +33,7 @@
 		</div>
         
         <ul class="tabs">
-           <?php if($_REQUEST['type']!='lienhe' && $_REQUEST['type']!='footer' && $_REQUEST['type']!='khu-vuc'){ ?>
+           <?php if($_REQUEST['type']!='lienhe' && $_REQUEST['type']!='footer' && $_REQUEST['type']!='khu-vuc' && $_GET['type']!='phan-hoi-khach-hang'){ ?>
            <li>
                <a href="#info">Thông tin chung</a>
            </li>
@@ -45,7 +45,7 @@
            <?php } ?>
        </ul>
        
-	<?php if($_REQUEST['type']!='lienhe' && $_REQUEST['type']!='footer' && $_REQUEST['type']!='khu-vuc'){ ?>
+	<?php if($_REQUEST['type']!='lienhe' && $_REQUEST['type']!='footer' && $_REQUEST['type']!='khu-vuc' && $_GET['type']!='phan-hoi-khach-hang'){ ?>
      <div id="info" class="tab_content">
          
      <?php if($_REQUEST['type']=='about'){ ?>
@@ -111,7 +111,7 @@
          <!-- End info -->
       <?php foreach ($config['lang'] as $key => $value) { ?>
 
-       <div id="content_lang_<?=$key?>" class="tab_content <?php if($_REQUEST['type']!='lienhe' && $_REQUEST['type']!='footer' && $_REQUEST['type']!='khu-vuc' && $value=='')echo 'info' ?>">   
+       <div id="content_lang_<?=$key?>" class="tab_content <?php if($_REQUEST['type']!='lienhe' && $_REQUEST['type']!='footer' && $_REQUEST['type']!='khu-vuc' && $_GET['type']!='phan-hoi-khach-hang' && $value=='')echo 'info' ?>">   
          <?php if($_REQUEST['type']=='about' or $_REQUEST['type']=='khu-vuc'){ ?>     
             <div class="formRow">
                 <label>Tiêu đề</label>

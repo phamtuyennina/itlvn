@@ -4,41 +4,30 @@
 <ul id="menu" class="nav">
   <li class="dash" id="menu1"><a class=" active" title="" href="index.php"><span>Trang chủ</span></a></li>
 
-  <li class="categories_li product_li <?php if($_GET['com']=='product' || $_GET['com']=='order' || $_GET['com']=='excel') echo ' activemenu' ?>" id="menu2"><a href="" title="" class="exp"><span>Sản phẩm</span><strong></strong></a>
-   <ul class="sub">     
-     	<?php phanquyen_menu('Màu sắc','product','man_color','sanpham'); ?>
-        <?php phanquyen_menu('Size','product','man_size','sanpham'); ?>
-     	<?php phanquyen_menu('Quản lý danh mục 1','product','man_danhmuc','sanpham'); ?>
-        <?php phanquyen_menu('Quản lý danh mục 2','product','man_list','sanpham'); ?>
-        <?php phanquyen_menu('Quản lý danh mục 3','product','man_cat','sanpham'); ?>
-        <?php phanquyen_menu('Quản lý danh mục 4','product','man_item','sanpham'); ?>
-        <?php phanquyen_menu('Quản lý sản phẩm','product','man','sanpham'); ?>
-        <?php phanquyen_menu('Quản lý đơn hàng','order','man',''); ?>
-     
-    </ul>
-  </li>
-
-  <li class="categories_li news_li <?php if($_GET['com']=='news' && $_GET['type']=='giai-phap-kinh-doanh') echo ' activemenu' ?>" id="menu_tt1"><a href="" title="" class="exp"><span>Giải pháp kinh doanh</span><strong></strong></a>
+  <li class="categories_li news_li <?php if($_GET['com']=='news' && $_GET['type']=='giai-phap-kinh-doanh') echo ' activemenu' ?>" id="menu_tt11"><a href="" title="" class="exp"><span>Giải pháp kinh doanh</span><strong></strong></a>
         <ul class="sub">  
             <?php phanquyen_menu('Danh mục cấp 1','news','man_danhmuc','giai-phap-kinh-doanh'); ?>
             <?php phanquyen_menu('Quản lý giải pháp kinh doanh','news','man','giai-phap-kinh-doanh'); ?>         
         </ul>
   </li>
 
-  <li class="categories_li news_li <?php if(($_GET['com']=='news' or $_GET['com']=='about') && $_GET['type']=='khu-vuc') echo ' activemenu' ?>" id="menu_tt1"><a href="" title="" class="exp"><span>Khu vực</span><strong></strong></a>
+  <li class="categories_li news_li <?php if(($_GET['com']=='news' or $_GET['com']=='about') && $_GET['type']=='khu-vuc') echo ' activemenu' ?>" id="menu_tt12"><a href="" title="" class="exp"><span>Khu vực</span><strong></strong></a>
         <ul class="sub">  
             <?php phanquyen_menu('Mô tả khu vực','about','capnhat','khu-vuc'); ?>
             <?php phanquyen_menu('Quản lý khu vực','news','man','khu-vuc'); ?>         
         </ul>
   </li>
-
-	 <li class="categories_li news_li <?php if($_GET['com']=='news' or $_GET['com']=='vnexpress') echo ' activemenu' ?>" id="menu_tt"><a href="" title="" class="exp"><span>Tin tức</span><strong></strong></a>
+  <li class="categories_li news_li <?php if($_GET['com']=='news' && $_GET['type']=='tin-tuc') echo ' activemenu' ?>" id="menu_tt10"><a href="" title="" class="exp"><span>Tin tức</span><strong></strong></a>
         <ul class="sub">  
-            <?php phanquyen_menu('Danh mục cấp 1','news','man_danhmuc','tintuc'); ?>
-            <?php phanquyen_menu('Danh mục cấp 2','news','man_list','tintuc'); ?>
-            <?php phanquyen_menu('Danh mục cấp 3','news','man_cat','tintuc'); ?>
-            <?php phanquyen_menu('Quản lý tin tức','news','man','tintuc'); ?>         
-			<?php phanquyen_menu('Lấy tin từ Vnexpress','vnexpress','man',''); ?>       
+            <?php phanquyen_menu('Danh mục cấp 1','news','man_danhmuc','tin-tuc'); ?>
+            <?php phanquyen_menu('Quản lý tin tức','news','man','tin-tuc'); ?>         
+        </ul>
+  </li>
+	 <li class="categories_li news_li <?php if($_GET['com']=='news' && ($_GET['type']!='giai-phap-kinh-doanh' && $_GET['type']!='khu-vuc' && $_GET['type']!='tin-tuc')) echo ' activemenu' ?>" id="menu_tt"><a href="" title="" class="exp"><span>Nội dung khác</span><strong></strong></a>
+        <ul class="sub">  
+            <?php phanquyen_menu('Giới thiệu','news','man','gioi-thieu'); ?>         
+            <?php phanquyen_menu('Quản lý hướng dẫn hỏi đáp','news','man','huong-dan-hoi-dap'); ?>         
+            <?php phanquyen_menu('Quản lý phản hồi khách hàng','news','man','phan-hoi-khach-hang'); ?>         
         </ul>
     </li>
       
@@ -58,6 +47,7 @@
             <?php phanquyen_menu('Banner menu yêu cầu dịch vụ','background','capnhat','yeu-cau-dich-vu'); ?>
             <?php phanquyen_menu('Banner menu hướng dẫn hỏi đáp','background','capnhat','huong-dan-hoi-dap'); ?>
             <?php phanquyen_menu('Banner menu phản hồi khách hàng','background','capnhat','phan-hoi-khach-hang'); ?>
+            <?php phanquyen_menu('Hình ảnh phản hồi khách hàng','background','capnhat','bg-huong-dan-hoi-dap'); ?>
      </ul>
      
       </li>
@@ -74,7 +64,9 @@
 
      <li class="categories_li about_li <?php if($_GET['com']=='about' || $_GET['com']=='video') echo ' activemenu' ?>" id="menu_t"><a href="" title="" class="exp"><span>Trang tĩnh</span><strong></strong></a>
     <ul class="sub">
-        <?php phanquyen_menu('Giới thiệu','about','capnhat','about'); ?>
+        <?php phanquyen_menu('Mô tả phản hồi khách hàng','about','capnhat','phan-hoi-khach-hang'); ?>
+        <?php phanquyen_menu('Chính sách bảo mật','about','capnhat','chinh-sach-bat-mat'); ?>
+        <?php phanquyen_menu('Điều khoản sử dụng','about','capnhat','dieu-khoan-su-dung'); ?>
         <?php phanquyen_menu('Cập nhật liên hệ','about','capnhat','lienhe'); ?>
         <?php phanquyen_menu('Cập nhật footer','about','capnhat','footer'); ?>
         </ul>
@@ -89,9 +81,7 @@
       </li> 
      <li class="categories_li setting_li <?php if($_GET['com']=='lkweb' || $_GET['com']=='yahoo' || $_GET['com']=='company' || $_GET['com']=='meta' || $_GET['com']=='user' || $_GET['com']=='video') echo ' activemenu' ?>" id="menu_cp"><a href="" title="" class="exp"><span>Nội dung khác</span><strong></strong></a>
   	<ul class="sub">
-        <?php phanquyen_menu('Quản lý liên kết web','lkweb','man',''); ?>
     	<?php phanquyen_menu('Video','video','man',''); ?>
-        <?php phanquyen_menu('Quản lý hỗ trợ trực tuyến','yahoo','man',''); ?>
         <?php phanquyen_menu('Cập nhật thông tin công ty','company','capnhat',''); ?>
          <li<?php if($_GET['act']=='admin_edit') echo ' class="this"' ?>><a href="index.php?com=user&act=admin_edit">Quản lý Tài Khoản</a></li>
     </ul>

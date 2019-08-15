@@ -3,7 +3,16 @@
 	$sql = "select photo from #_background where type='".$type."' limit 0,1";
 	$d->query($sql);
 	$row_bf = $d->fetch_array();
+
+	$d->reset();
+	$sql = "select photo from #_background where type='bg-".$type."' limit 0,1";
+	$d->query($sql);
+	$row_bf1 = $d->fetch_array();	
   	
+  $d->reset();
+  $sql_tinmoi = "select id,ten$lang as ten,noidung$lang as noidung from #_news where type='huong-dan-hoi-dap' and hienthi=1 order by stt,id desc";
+  $d->query($sql_tinmoi);
+  $tinmoi = $d->result_array();
 ?>
 <div class="banner_z">
 	<div class="business-banner">
@@ -21,4 +30,34 @@
 			<li class="<?php if($com=='lien-he'){echo 'active';} ?>"><a href="lien-he.html"><?=_lienhe?></a></li>
 		</ul>
 	</nav>
+</div>
+<div class="section-block customer-question-answer-section">
+	<div class="container">
+		<div class="section-header">
+            <h2 class="form-title"><?=_cauhoithuonggap?></h2>
+        </div>
+        <div class="row">
+        <div class="section-content">
+        	<div class="col-sm-12 col-md-7 question-list-block">
+        		<div class="panel-group-block accordion accordionBlock" id="question-itl">
+        			<?php foreach ($tinmoi as $v) {?>
+					<div class="panel accordion-item-panel collapse-toggle-nav">
+                            <div class="panel-heading">
+                            <a class="collapse-toggle" href="javascript:void(0)"><?=$v['ten']?></a>
+                            </div>
+                            <div class="panel-body collapse-div">
+                                <div class="panel-body-inner">
+          						<?=$v['noidung']?>
+                                </div>
+                            </div>
+                        </div>
+        			<?php }?>
+        		</div>
+        	</div>
+        	<div class="col-sm-12 col-md-5 quick-guide-img-block">
+                <img src="<?=_upload_hinhanh_l.$row_bf1['photo']?>" alt="<?=$company['ten']?>">
+            </div>
+        </div>
+        </div>
+	</div>
 </div>

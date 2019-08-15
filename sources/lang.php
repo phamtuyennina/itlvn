@@ -23,6 +23,8 @@
 @define ('_sodienthoai','Số điện thoại');
 @define ('_mota','Mô tả');
 @define ('_nhapthongtinmotavekienhang','Nhập thông tin mô tả về kiện hàng');
+@define ('_cauhoithuonggap','Câu hỏi thường gặp');
+@define ('_boi','bởi');
 
 
 

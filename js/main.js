@@ -89,6 +89,19 @@ function loadtrang(vitri,type,$root){
   });       
 }    
 $(document).ready(function() {
+  $('.collapse-toggle').click(function(e) {
+        e.preventDefault();
+        if (!$(this).closest('.collapse-toggle-nav').hasClass('show-collapse')) {
+            $('.collapse-div').slideUp("slow");
+            $('.collapse-toggle-nav').removeClass('show-collapse');
+            $(this).closest('.collapse-toggle-nav').addClass('show-collapse');
+            $(this).closest('.collapse-toggle-nav').find('.collapse-div').slideDown("slow");
+        } else {
+            $(this).closest('.collapse-toggle-nav').removeClass('show-collapse');
+            $(this).closest('.collapse-toggle-nav').find('.collapse-div').slideUp("slow");
+        }
+    });
+    
   if($('#recaptcha_response').length){
      grecaptcha.ready(function () {
         grecaptcha.execute(sitekey, { action: 'contact' }).then(function (token) {
