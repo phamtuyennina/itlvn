@@ -25,7 +25,7 @@
 
 	#========= Các kiểu định dạng ==============
 	
-	@define ( _format_duoihinh , "jpg|png|jpeg|gif|JPG|PNG|JPEG|GIF");
+	@define ( _format_duoihinh , "jpg|png|jpeg|gif|JPG|PNG|JPEG|GIF|pdf|PDF");
 	@define ( _format_duoitailieu , "doc|xls|ppt|pdf|rar|win|zip|docx|pptx|xlsx|DOC|XLS|PPT|PDF|RAR|WIN|ZIP|DOCX|PPTX|XLSX");
 	@define ( _format_duoixemtailieu , "doc|xls|ppt|pdf|DOC|XLS|PPT|PDF");
 	@define ( _format_duoitatca , "doc|xls|ppt|pdf|rar|win|zip|docx|pptx|xlsx|DOC|XLS|PPT|PDF|RAR|WIN|ZIP|DOCX|PPTX|XLSX|txt|TXT|xml|XML|html|HTML|png|PNG|gif|GIF|jpg|JPG|");

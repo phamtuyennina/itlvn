@@ -72,7 +72,7 @@
 		$title = $title_new['title'];
 		$keywords = $title_new['keywords'];
 		$description = $title_new['description'];
-
+		$template="news_lisst";
 		#Điều kiện lấy danh mục
 		$where = " type='".$type."' and id_danhmuc='".$title_new['id']."' and hienthi=1 order by stt,id desc";
 
@@ -108,7 +108,7 @@
 		$title = $title_new['title'];
 		$keywords = $title_new['keywords'];
 		$description = $title_new['description'];
-
+		
 		#Điều kiện lấy danh mục
 		$where = " type='".$type."' and id_cat='".$id_cat."' and hienthi=1 order by stt,id desc";
 
@@ -116,6 +116,7 @@
 	#Tất cả Tin tức có type là $type
 	else{
 		$where = " type='".$type."' and hienthi=1 order by stt,id desc";
+		$template="news";
 	}
 
 	#Lấy tin tức và phân trang

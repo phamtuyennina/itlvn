@@ -5,15 +5,20 @@
 	$d->query($sql_banner);
 	$row_logo = $d->fetch_array();
 
-  $d->reset();
-  $sql = "select id,ten$lang as ten,tenkhongdau,photo,ngaytao,mota$lang as mota from #_news where type='tin-tuc' and hienthi=1 order by ngaytao desc limit 0,5";
-  $d->query($sql);
-  $tinmoi1 = $d->result_array(); 
+    $d->reset();
+    $sql = "select id,ten$lang as ten,tenkhongdau,photo,ngaytao,mota$lang as mota from #_news where type='tin-tuc' and hienthi=1 order by ngaytao desc limit 0,5";
+    $d->query($sql);
+    $tinmoi1 = $d->result_array(); 
 
     $d->reset();
     $sql = "select id,ten$lang as ten,tenkhongdau,photo from #_news_danhmuc where type='giai-phap-kinh-doanh' and hienthi=1 order by stt,id desc limit 0,1";
     $d->query($sql);
-    $giaiphap_danhmuc = $d->result_array();   	
+    $giaiphap_danhmuc = $d->result_array(); 
+
+    $d->reset();
+    $sql = "select id,ten$lang as ten,tenkhongdau,photo from #_news where type='gioi-thieu' and hienthi=1 order by stt,id desc limit 0,1";
+    $d->query($sql);
+    $gioithieu_danhmuc = $d->result_array();      	
 ?>
 <div class="top-header">
 	<div class="container">
@@ -72,7 +77,7 @@
       	<div class="menu">
             <ul class="nav navbar-nav main-menu" itemscope="" itemtype="http://schema.org/BreadcrumbList">
 				<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" class="treeview <?php if($com=='gioi-thieu'){echo 'active';} ?>">
-    				<a itemprop="item" href="gioi-thieu.html">
+    				<a itemprop="item" href="gioi-thieu/<?=$gioithieu_danhmuc[0]['tenkhongdau']?>.html">
         				<span itemprop="name"><?=_gioithieu?></span>
     				</a>
         			<meta itemprop="position" content="2">

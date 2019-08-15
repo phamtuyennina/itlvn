@@ -25,6 +25,8 @@
 @define ('_nhapthongtinmotavekienhang','Nhập thông tin mô tả về kiện hàng');
 @define ('_cauhoithuonggap','Câu hỏi thường gặp');
 @define ('_boi','bởi');
+@define ('_tinmoinhat','Tin mới nhất');
+@define ('_taibrochure','Tải Brochure');
 
 
 

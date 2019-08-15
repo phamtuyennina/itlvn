@@ -34,11 +34,11 @@
 	switch($com)
 	{
 		case 'gioi-thieu':
-			$type = "about";
+			$type = "gioi-thieu";
 			$title = _gioithieu;
 			$title_cat = _gioithieu;
-			$source = "about";
-			$template = "about";
+			$source = "gioithieu";
+			$template = "gioithieu";
 			break;
 		case '':
 		case 'index':
@@ -53,11 +53,10 @@
 			break;		
 		
 		case 'tin-tuc':
-			$type = "tintuc";
+			$type = "tin-tuc";
 			$title = _tintuc;
 			$title_cat = _tintuc;
 			$source = "news";
-			$template = isset($_GET['id']) ? "news_detail" : "news";
 			break;
 
 		case 'giai-phap-kinh-doanh':

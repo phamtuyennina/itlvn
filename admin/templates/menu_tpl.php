@@ -44,6 +44,7 @@
      		    <?php phanquyen_menu('Cập nhật logo','background','capnhat','logo'); ?>
             <?php phanquyen_menu('Quản lý slider','slider','man_photo','slider'); ?>
             <?php phanquyen_menu('Banner menu Khu vực','background','capnhat','khu-vuc'); ?>
+            <?php phanquyen_menu('Banner menu giới thiệu','background','capnhat','gioi-thieu'); ?>
             <?php phanquyen_menu('Banner menu yêu cầu dịch vụ','background','capnhat','yeu-cau-dich-vu'); ?>
             <?php phanquyen_menu('Banner menu hướng dẫn hỏi đáp','background','capnhat','huong-dan-hoi-dap'); ?>
             <?php phanquyen_menu('Banner menu phản hồi khách hàng','background','capnhat','phan-hoi-khach-hang'); ?>

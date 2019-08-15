@@ -149,6 +149,20 @@ $(document).ready(function() {
       draggable:true,
       mobileFirst:true
   });
+  $('.slick_news-content').slick({
+      lazyLoad: 'ondemand',
+      infinite: true,
+      accessibility:true,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      autoplay:true,
+      autoplaySpeed:3000,
+      arrows:true,
+      centerMode:false,
+      dots:false,
+      draggable:true,
+      mobileFirst:true
+  });
   
 
 });

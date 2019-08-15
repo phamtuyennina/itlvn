@@ -1,3 +1,4 @@
+
 <?php
 	$d->reset();
 	$sql = "select photo from #_background where type='".$type."' limit 0,1";
@@ -19,7 +20,7 @@
 		<img src="<?=_upload_hinhanh_l.$row_bf['photo']?>" alt="<?=$title_cat?>">
 		<h1 class="banner-title-new container"><?=$title_cat?></h1>
 	</div>
-</div>
+</div '
 <div class="sub-menu-nav sub-menu-nav-secondary">
 	<nav class="navbar navbar-tab-style business-navbar customer-desk-navbar">
 		<ul class="nav navbar-nav">
