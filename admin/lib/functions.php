@@ -24,6 +24,23 @@ function send_face($link){
 		echo ($messger);
 		die;
 }
+function gettenDM($id=0){
+	global $d,$dem,$lang;
+	$d->reset();
+	$sql = "select ten$lang as ten from #_news_danhmuc where id=".$id;
+	$d->query($sql);
+	$dem = $d->fetch_array();
+	return $dem['ten'];
+}
+function getcongviec($id=0){
+	global $d,$dem;
+	if(!empty($id)){$a=' and id_danhmuc='.$id;}
+	$d->reset();
+	$sql = "select count(id) as dem from #_news where type='tuyen-dung' and hienthi=1 $a order by stt,id desc";
+	$d->query($sql);
+	$dem = $d->fetch_array();
+	return $dem['dem'];
+}
 function getRealIPAddress()
 {
 	$do_check = 0;

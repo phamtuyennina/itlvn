@@ -80,7 +80,7 @@
 							  $d->query($sql);
 							  $tinmoi1 = $d->result_array();
 	 					?>
-						<div class="corporate-news">
+						<div class="corporate-news col-xs-12">
 							<div class="row m-r-0">
 								<div class="section-header">
                                     <h2 class="section-title section-title_list" id=""><?=$v['ten']?></h2>
@@ -117,7 +117,7 @@
                             </div>
 						</div>
 	 					<?php }?>
-	 					<div class="corporate-news">
+	 					<div class="corporate-news col-xs-12">
 	 						<div class="row m-r-0">
 	 							<div class="section-header">
                                     <h2 class="section-title section-title_list" id=""><?=_tinmoinhat?></h2>

@@ -98,8 +98,10 @@ function save_photo(){
 	if(empty($_POST)) transfer("Không nhận được dữ liệu", "index.php?com=slider&act=man_photo".$urlcu);
 	$id = isset($_POST['id']) ? themdau($_POST['id']) : "";
 	if($id){
+		$a=$_REQUEST['type'];
+		if($a!='brochure'){$b=_format_duoihinh;}else{$b=_format_duoitailieu;}
 			$file_name = $_FILES['file']['name'];
-			if($photo = upload_image("file", _format_duoihinh, _upload_hinhanh,$file_name)){
+			if($photo = upload_image("file", $b, _upload_hinhanh,$file_name)){
 				$data['photo'] = $photo;
 				$d->setTable('slider');
 				$d->setWhere('id', $id);
@@ -133,8 +135,10 @@ function save_photo(){
 	}
 	{ 			
 		for($i=0; $i<3; $i++){
+			$a=$_REQUEST['type'];
+			if($a!='brochure'){$b=_format_duoihinh;}else{$b=_format_duoitailieu;}
 				$file_name = $_FILES['file'.$i]['name'];
-				if($data['photo'] = upload_image("file".$i, _format_duoihinh, _upload_hinhanh,$file_name))
+				if($data['photo'] = upload_image("file".$i, $b, _upload_hinhanh,$file_name))
 					{							
 						$data['id_slider'] = $_REQUEST['id_slider'];
 						$data['type'] = $_REQUEST['type'];

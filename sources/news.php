@@ -26,8 +26,9 @@
 	#Chi tiết tin tức
 	elseif($id!='')
 	{
+		if($type=='tin-tuc'){$template="news_detail";}
 		#Chi tiết tin tức
-		$sql = "select ten$lang as ten,id,mota$lang as mota,noidung$lang as noidung,title,keywords,description,photo,id_danhmuc,id_list,id_cat from #_news where tenkhongdau='".$id."' limit 0,1";
+		$sql = "select ten$lang as ten,id,mota$lang as mota,noidung$lang as noidung,title,keywords,description,photo,id_danhmuc,id_list,id_cat,ngaytao from #_news where tenkhongdau='".$id."' limit 0,1";
 		$d->query($sql);
 		$tintuc_detail = $d->fetch_array();
 		if(empty($tintuc_detail['id'])){
@@ -49,14 +50,21 @@
 		$d->query($sql_hinhkhac);
 		$hinhkhac = $d->result_array();
 
-		#tags
-		$d->reset();
-    $sql_tags = "select id,ten from #_tags where  id IN (select id_tag from #_protag where id_pro=".$tintuc_detail['id'].") and type='".$type."' order by id desc";
-    $d->query($sql_tags);
-    $tags_sp = $d->result_array();
+		if($tintuc_detail['id_danhmuc']>0){
+			$d->reset();
+			$sql = "select id,ten$lang as ten,title,tenkhongdau,description from #_news_danhmuc where hienthi=1 and id='".$tintuc_detail['id']."' limit 0,1";
+			$d->query($sql);
+			$title_new = $d->fetch_array();
+			if($title_new['ten']!=''){
+				//$bread->add($title_new['ten'],'tin-tuc/'.$title_new['tenkhongdau']);
+			}
+		}
+		$bread->add($title_cat,getCurrentPageURL());		
+
+
 
 		#Các tin cũ hơn
-		$where = " type='".$type."' and hienthi=1 and id<>'".$tintuc_detail['id']."' and id_danhmuc=".$tintuc_detail['id_danhmuc']." and id_list=".$tintuc_detail['id_list']." and id_cat=".$tintuc_detail['id_cat']." order by stt,id desc";
+		$where = " type='".$type."' and hienthi=1 and id<>'".$tintuc_detail['id']."' and id_danhmuc=".$tintuc_detail['id_danhmuc']." and id_list=".$tintuc_detail['id_list']." and id_cat=".$tintuc_detail['id_cat']." ";
 	}
 	#Danh mục tin tức
 	elseif($id_danhmuc!='')
@@ -72,9 +80,9 @@
 		$title = $title_new['title'];
 		$keywords = $title_new['keywords'];
 		$description = $title_new['description'];
-		$template="news_lisst";
+		if($type=='tin-tuc'){$template="news_lisst";}
 		#Điều kiện lấy danh mục
-		$where = " type='".$type."' and id_danhmuc='".$title_new['id']."' and hienthi=1 order by stt,id desc";
+		$where = " type='".$type."' and id_danhmuc='".$title_new['id']."' and hienthi=1";
 
 	}
 	elseif($id_list!='')
@@ -92,7 +100,7 @@
 		$description = $title_new['description'];
 
 		#Điều kiện lấy danh mục
-		$where = " type='".$type."' and id_list='".$title_new['id']."' and hienthi=1 order by stt,id desc";
+		$where = " type='".$type."' and id_list='".$title_new['id']."' and hienthi=1 ";
 
 	}
 	elseif($id_cat!='')
@@ -110,15 +118,21 @@
 		$description = $title_new['description'];
 		
 		#Điều kiện lấy danh mục
-		$where = " type='".$type."' and id_cat='".$id_cat."' and hienthi=1 order by stt,id desc";
+		$where = " type='".$type."' and id_cat='".$id_cat."' and hienthi=1";
 
 	}
 	#Tất cả Tin tức có type là $type
 	else{
-		$where = " type='".$type."' and hienthi=1 order by stt,id desc";
-		$template="news";
+		$where = " type='".$type."' and hienthi=1 ";
+		if($type=='tin-tuc'){$template="news";}
+		
 	}
-
+	if($type=='tuyen-dung'){
+		$where .=" order by ngaytao desc";
+	}else{
+		$where .=" order by stt,id desc";
+	}
+	
 	#Lấy tin tức và phân trang
 	$d->reset();
 	$sql = "SELECT count(id) AS numrows FROM #_news where $where";
@@ -129,11 +143,11 @@
 	$page = $_GET['p'];
 	if(!empty($id))
 	{
-		$pageSize = $company['soluong_tink'];//Số tin khác cho 1 trang
+		$pageSize = 8;//Số tin khác cho 1 trang
 	}
 	else
 	{
-		$pageSize = $company['soluong_tin'];//Số tin cho 1 trang
+		$pageSize = $pageSize1;//Số tin cho 1 trang
 	}
 	$offset = 5;//Số trang hiển thị
 	if ($page == "")$page = 1;
@@ -142,7 +156,7 @@
 	$bg = $pageSize*$page;
 
 	$d->reset();
-	$sql = "select id,ten$lang as ten,tenkhongdau,mota$lang as mota,thumb,ngaytao from #_news where $where limit $bg,$pageSize";
+	$sql = "select id,ten$lang as ten,tenkhongdau,mota$lang as mota,thumb,ngaytao,ngayhethan,khuvuc,id_danhmuc from #_news where $where limit $bg,$pageSize";
 	$d->query($sql);
 	$tintuc = $d->result_array();
 	$url_link = getCurrentPageURL();

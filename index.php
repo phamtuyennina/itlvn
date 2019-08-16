@@ -23,7 +23,8 @@
 <html lang="vi">
 <head>
 	<base href="http://<?=$config_url?>/"  />
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1" />
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1" /> -->
+	<meta name="viewport" content="width=1210" />
 	<?php include _template."layout/seoweb.php";?>
 	<?php include _template."layout/js_css.php";?>
     <?=$company['analytics']?>

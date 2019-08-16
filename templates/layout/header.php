@@ -54,7 +54,7 @@
                 <a href=""><?=_trangchu?></a>
             </li>
             <li class="top-menu-item career-item">
-                <a href="tuyen-dung.html"><?=_cohoinghenghiep?></a>
+                <a href="moi-truong-lam-viec.html"><?=_cohoinghenghiep?></a>
             </li>
             <li class="top-menu-item contact-item">
                 <a href="line-he.html"><?=_lienhe?></a>

@@ -67,9 +67,13 @@
     <thead>
       <tr>
         <td></td>
-        <td class="tb_data_small"><a href="#" class="tipS" style="margin: 5px;">Thứ tự</a></td>       
+        <td class="tb_data_small"><a href="#" class="tipS" style="margin: 5px;">Thứ tự</a></td>  
+        <?php if($_GET['type']!='brochure'){ ?>     
         <td width="150">Hình ảnh</td>
-        <td class="sortCol"><div>Tên hình<span></span></div></td>
+        <?php }else{?>
+        <td width="150">File</td>
+        <?php }?>
+        <td class="sortCol"><div>Tên<span></span></div></td>
         <td class="tb_data_small">Ẩn/Hiện</td>
         <td width="200">Thao tác</td>
       </tr>
@@ -89,9 +93,15 @@
         <td align="center">
             <input data-val0="<?=$items[$i]['id']?>" data-val2="table_<?=$_GET['com']?>" type="text" value="<?=$items[$i]['stt']?>" data-val3="stt" name="stt<?=$i?>" onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" class="tipS smallText stt" onblur="stt(this)" id="upstt" original-title="Nhập số thứ tự sản phẩm" rel="<?=$items[$i]['id']?>" />
         </td> 
+        <?php if($_GET['type']!='brochure'){ ?>
         <td align="center">
-                <img src="<?=_upload_hinhanh.$items[$i]['photo']?>" width="100" border="0" />
+            <img src="<?=_upload_hinhanh.$items[$i]['photo']?>" width="100" border="0" />
         </td>
+        <?php }else{?>
+        <td align="center">
+            <a target="_blank" href="<?=_upload_hinhanh.$items[$i]['photo']?>"><?=$items[$i]['photo']?></a>
+        </td>
+        <?php }?>
       
         <td class="title_name_data">
             <a href="index.php?com=slider&act=edit_photo&id=<?=$items[$i]['id']?><?php if($_REQUEST['type']!='') echo'&type='. $_REQUEST['type'];?><?php if($_REQUEST['p']!='') echo'&p='.$_REQUEST['p'];?>" class="tipS SC_bold">

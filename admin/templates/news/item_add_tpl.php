@@ -139,7 +139,7 @@ function get_main_category()
        </ul>
 
        <div id="info" class="tab_content">
-		<div class="formRow <?php if(!in_array($_GET['type'],array('tin-tuc','giai-phap-kinh-doanh'))){echo 'none';} ?>">
+		<div class="formRow <?php if(!in_array($_GET['type'],array('tin-tuc','giai-phap-kinh-doanh','tuyen-dung'))){echo 'none';} ?>">
 			<label>Chọn danh mục 1</label>
 			<div class="formRight">
 			<?=get_main_danhmuc()?>
@@ -221,7 +221,25 @@ function get_main_category()
             </div>
             <div class="clear"></div>
         </div>
- 	<div class="formRow <?php if($_GET['type']=='khu-vuc' or $_GET['type']=='huong-dan-hoi-dap' or $_GET['type']=='phan-hoi-khach-hang'){echo 'none';} ?>">
+ 	      
+        <div class="formRow <?php if($_GET['type']!='tuyen-dung'){echo 'none';} ?>">
+            <label>Khu vực</label>
+            <div class="formRight">
+                <input type="text" value="<?=@$item['khuvuc']?>" name="khuvuc"  class="tipS" />
+            </div>
+            <div class="clear"></div>
+        </div>
+        
+        <div class="formRow <?php if($_GET['type']!='tuyen-dung'){echo 'none';} ?>">
+            <label>Ngày hết hạn</label>
+            <div class="formRight">
+                <input type="text" value="<?=@$item['ngayhethan']?>" name="ngayhethan"  class="tipS" />
+            </div>
+            <div class="clear"></div>
+        </div>
+        
+
+      <div class="formRow <?php if($_GET['type']=='khu-vuc' or $_GET['type']=='huong-dan-hoi-dap' or $_GET['type']=='phan-hoi-khach-hang'){echo 'none';} ?>">
             <label>Title</label>
             <div class="formRight">
                 <input type="text" value="<?=@$item['title']?>" name="title" title="Nội dung thẻ meta Title dùng để SEO" class="tipS" />

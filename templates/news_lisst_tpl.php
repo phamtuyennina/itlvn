@@ -28,6 +28,7 @@
                                 	<div class="slick_news-content1">
                                 	<?php foreach ($tinmoi as $key => $v) {?>
 									<div class="col-xs-6">
+
 										<div class="article-item-inner ">
 	                                        <div>
 	                                            <a href="<?=$com?>/<?=$v['tenkhongdau']?>.html">
@@ -44,6 +45,8 @@
 									</div>
                                 	<?php }?>
                                 	</div>
+                                	<div class="clear"></div>
+									<div class="pagination"><?=pagesListLimitadmin($url_link , $totalRows , $pageSize, $offset)?></div>
                             	</div>
                             </div>
  						</div>

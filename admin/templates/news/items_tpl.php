@@ -156,7 +156,7 @@ function get_main_category()
       <tr>
         <td></td>
         <td class="tb_data_small"><a href="#" class="tipS" style="margin: 5px;">Thứ tự</a></td>     
-        <td class="tb_data_small <?php if(!in_array($_GET['type'],array('tin-tuc','giai-phap-kinh-doanh'))){echo 'none';} ?>"><?=get_main_danhmuc()?></td>
+        <td class="tb_data_small <?php if(!in_array($_GET['type'],array('tin-tuc','giai-phap-kinh-doanh','tuyen-dung'))){echo 'none';} ?>"><?=get_main_danhmuc()?></td>
         <td class="tb_data_small none"><?=get_main_list()?></td>
         <td class="tb_data_small none"><?=get_main_category()?></td>
         <td class="sortCol"><div>Tên bài viết<span></span></div></td>
@@ -179,7 +179,7 @@ function get_main_category()
             <input data-val0="<?=$items[$i]['id']?>" data-val2="table_<?=$_GET['com']?>" data-val3="stt" onblur="stt(this)" type="text" value="<?=$items[$i]['stt']?>" name="ordering[]" onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" class="tipS smallText update_stt" original-title="Nhập số thứ tự bài viết" rel="<?=$items[$i]['id']?>" />
 
         </td> 
-         <td align="center" class="<?php if(!in_array($_GET['type'],array('tin-tuc','giai-phap-kinh-doanh'))){echo 'none';} ?>">
+         <td align="center" class="<?php if(!in_array($_GET['type'],array('tin-tuc','giai-phap-kinh-doanh','tuyen-dung'))){echo 'none';} ?>">
 			<?php
 				$sql_danhmuc="select ten from table_news_danhmuc where id='".$items[$i]['id_danhmuc']."'";
 				$result=mysql_query($sql_danhmuc);

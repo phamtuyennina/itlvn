@@ -23,7 +23,13 @@
             <?php phanquyen_menu('Quản lý tin tức','news','man','tin-tuc'); ?>         
         </ul>
   </li>
-	 <li class="categories_li news_li <?php if($_GET['com']=='news' && ($_GET['type']!='giai-phap-kinh-doanh' && $_GET['type']!='khu-vuc' && $_GET['type']!='tin-tuc')) echo ' activemenu' ?>" id="menu_tt"><a href="" title="" class="exp"><span>Nội dung khác</span><strong></strong></a>
+  <li class="categories_li news_li <?php if($_GET['com']=='news' && $_GET['type']=='tuyen-dung') echo ' activemenu' ?>" id="menu_tt16"><a href="" title="" class="exp"><span>Tuyển dụng</span><strong></strong></a>
+        <ul class="sub">  
+            <?php phanquyen_menu('Danh mục cấp 1','news','man_danhmuc','tuyen-dung'); ?>
+            <?php phanquyen_menu('Quản lý tuyển dụng','news','man','tuyen-dung'); ?>         
+        </ul>
+  </li>
+	 <li class="categories_li news_li <?php if($_GET['com']=='news' && ($_GET['type']!='giai-phap-kinh-doanh' && $_GET['type']!='khu-vuc' && $_GET['type']!='tuyen-dung' && $_GET['type']!='tin-tuc')) echo ' activemenu' ?>" id="menu_tt"><a href="" title="" class="exp"><span>Nội dung khác</span><strong></strong></a>
         <ul class="sub">  
             <?php phanquyen_menu('Giới thiệu','news','man','gioi-thieu'); ?>         
             <?php phanquyen_menu('Quản lý hướng dẫn hỏi đáp','news','man','huong-dan-hoi-dap'); ?>         
@@ -43,11 +49,13 @@
            <ul class="sub">
      		    <?php phanquyen_menu('Cập nhật logo','background','capnhat','logo'); ?>
             <?php phanquyen_menu('Quản lý slider','slider','man_photo','slider'); ?>
+            <?php phanquyen_menu('Tải Brochure','slider','man_photo','brochure'); ?>
             <?php phanquyen_menu('Banner menu Khu vực','background','capnhat','khu-vuc'); ?>
             <?php phanquyen_menu('Banner menu giới thiệu','background','capnhat','gioi-thieu'); ?>
             <?php phanquyen_menu('Banner menu yêu cầu dịch vụ','background','capnhat','yeu-cau-dich-vu'); ?>
             <?php phanquyen_menu('Banner menu hướng dẫn hỏi đáp','background','capnhat','huong-dan-hoi-dap'); ?>
             <?php phanquyen_menu('Banner menu phản hồi khách hàng','background','capnhat','phan-hoi-khach-hang'); ?>
+            <?php phanquyen_menu('Banner menu tuyển dụng','background','capnhat','tuyen-dung'); ?>
             <?php phanquyen_menu('Hình ảnh phản hồi khách hàng','background','capnhat','bg-huong-dan-hoi-dap'); ?>
      </ul>
      
@@ -68,6 +76,9 @@
         <?php phanquyen_menu('Mô tả phản hồi khách hàng','about','capnhat','phan-hoi-khach-hang'); ?>
         <?php phanquyen_menu('Chính sách bảo mật','about','capnhat','chinh-sach-bat-mat'); ?>
         <?php phanquyen_menu('Điều khoản sử dụng','about','capnhat','dieu-khoan-su-dung'); ?>
+        <?php phanquyen_menu('Môi trường làm việc','about','capnhat','moi-truong-lam-viec'); ?>
+        <?php phanquyen_menu('Cơ hội nghề nghiệp','about','capnhat','co-hoi-nghe-nghiep'); ?>
+        <?php phanquyen_menu('Gia nhập đội ngũ getss','about','capnhat','gia-nhap-doi-ngu'); ?>
         <?php phanquyen_menu('Cập nhật liên hệ','about','capnhat','lienhe'); ?>
         <?php phanquyen_menu('Cập nhật footer','about','capnhat','footer'); ?>
         </ul>

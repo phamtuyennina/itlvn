@@ -52,16 +52,16 @@
                 <h4 class="list-title-item"><?=_cohoinghenghiep?></h4>
                 <ul class="list-group footer-links-list">
                     <li>
-                        <a href="/vn/career/working-environment.html#view">Môi trường làm việc</a>
+                        <a href="moi-truong-lam-viec.html"><?=_moitruonglamviec?></a>
                     </li>
                     <li>
-                        <a href="/vn/career/why-join-itl.html#view">Gia nhập đội ngũ ITL</a>
+                        <a href="gia-nhap-doi-ngu.html"><?=_gianhapdoingu?></a>
                     </li>
                     <li>
-                        <a href="/vn/career/graduates.html">Cơ hội</a>
+                        <a href="co-hoi-nghe-nghiep.html"><?=_cohoinghenghiep?></a>
                     </li>
                     <li>
-                        <a href="/vn/career/job-openning.html#view">Thông tin tuyển dụng</a>
+                        <a href="tuyen-dung.html"><?=_thongtintuyendung?></a>
                     </li>
                 </ul>
                 </div>
@@ -71,7 +71,7 @@
                     <h4 class="list-title-item"><?=_khachhang?></h4>
                     <ul class="list-group footer-links-list">
                         <li>
-                            <a href="/vn/customers-desk/booking-inquiry.html"><?=_yeucaudichvu?></a>
+                            <a href="yeu-cau-dich-vu.html"><?=_yeucaudichvu?></a>
                         </li>
                         <li>
                             <a href="#"><?=_tracuuvandon?></a>

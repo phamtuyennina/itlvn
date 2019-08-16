@@ -34,7 +34,7 @@
  	
        <div id="info" class="tab_content">
            <?php for($i=0; $i<3; $i++){?>
-          <div class="formRow">
+          <div class="formRow <?php if($_REQUEST['type']=='brochure'){ecjo 'none';} ?>">
             <label>Link liên kết:</label>
             <div class="formRight">
                 <input type="text" id="code_pro" name="link<?=$i?>" value=""  title="Nhập link liên kết cho hình ảnh" class="tipS" />
@@ -42,12 +42,16 @@
             <div class="clear"></div>
         </div>
 		<div class="formRow">
-			<label>Hình ảnh <?=$i+1?>:</label>
+			<label>Upload <?=$i+1?>:</label>
 			<div class="formRight">
             					<input type="file" id="file" name="file<?=$i?>" />
 				<img src="./images/question-button.png" alt="Upload hình" class="icon_question tipS" original-title="Tải hình ảnh (ảnh JPEG, GIF , JPG , PNG)">
                 <div class="note">  <?php if($_REQUEST['type']=='slider')echo 'Width:1000px &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Height:400px '; ?>   
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <?=_format_duoihinh_l?> </div>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <?php 
+                    $a=$_REQUEST['type'];
+                    if($a!='brochure'){$b=_format_duoihinh_l;}else{$b=_format_duoitailieu;}
+                ?>
+                 <?=$b?> </div>
 			</div>
 			<div class="clear"></div>
 		</div>

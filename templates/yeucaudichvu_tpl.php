@@ -29,7 +29,7 @@
 <section class="section-block customer-section">
     <div class="container">
         <div class="section-content">
-        <form action="" class="frm-booking-step1" method="post" novalidate="novalidate">
+        <form action="/" class="frm-booking-step1" method="post" novalidate="novalidate">
           <div class="wrap-form inquiry-booking-form select-services-form">
               <h2 class="form-title"><?=_luachondichvu?></h2>
               <div class="row">
@@ -40,7 +40,7 @@
                               <select class="form-control" id="bu_id" name="bu_id">
                                 <option value=""><?=_dichvu?></option>
 								<?php foreach ($giaiphap_danhmuc as $key => $v) {?>
-								<option value="<?=$v['id']?>"><?=$v['ten']?></option>
+								<option value="<?=$v['ten']?>"><?=$v['ten']?></option>
 								<?php }?>
                               </select>
                           </div>

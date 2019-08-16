@@ -17,8 +17,8 @@
 	@define ( _upload_sanpham , '../upload/sanpham/' );
 	@define ( _upload_sanpham_l , 'upload/sanpham/' );
 	
-	@define ( _upload_khac , '../upload/khac/' );
-	@define ( _upload_khac_l , 'upload/khac/' );
+	@define ( _upload_khac , '../upload/file/' );
+	@define ( _upload_khac_l , 'upload/file/' );
 	
 	@define ( _upload_hinhthem , '../upload/hinhthem/' );
 	@define ( _upload_hinhthem_l , 'upload/hinhthem/' );

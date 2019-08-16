@@ -34,7 +34,31 @@ $(document).ready(function(){
  });
   return false;
  });
+function GoiAjax($id){
+  $.ajax({
+    url: 'ajax/load_from.php',
+    type: 'POST',
+    data: {id: $id},
+    success:function(x){
+      $('#html_Data').html(x);
+     $('#myModal').modal('show'); 
+    }
+  })
+  
+  
+}
 $(document).ready(function(){
+  $('.btn-send').click(function(event) {
+    if($('#bu_id').val()==''){
+      alert(luachondichvu);$('#bu_id').focus();return false;
+    }
+    if(isEmpty($('.frm-booking-step1 input[name="customer_email"]').val(), emailkhonghople)){$('.frm-booking-step1 input[name="customer_email"]').focus();return false;}
+    if(isEmail($('.frm-booking-step1 input[name="customer_email"]').val(), emailkhonghople)){$('.frm-booking-step1 input[name="customer_email"]').focus();return false;}
+    if(isEmpty($('.frm-booking-step1 input[name="customer_phone"]').val(), nhapsodienthoai)){$('.frm-booking-step1 input[name="customer_phone"]').focus();return false;}
+    if(isPhone($('.frm-booking-step1 input[name="customer_phone"]').val(), nhapsodienthoai)){$('.frm-booking-step1 input[name="customer_phone"]').focus();return false;}
+    if(isEmpty($('.frm-booking-step1 textarea[name="description"]').val(), nhapnoidung)){$('.frm-booking-step1 textarea[name="description"]').focus();return false;}
+    $('.frm-booking-step1').submit();
+  });
  $('#content_tabs .tab').hide();
  $('#content_tabs .tab:first').show();
  $('#ultabs li:first').addClass('active');
@@ -102,14 +126,7 @@ $(document).ready(function() {
         }
     });
     
-  if($('#recaptcha_response').length){
-     grecaptcha.ready(function () {
-        grecaptcha.execute(sitekey, { action: 'contact' }).then(function (token) {
-            var recaptchaResponse = document.getElementById('recaptchaResponse');
-            recaptchaResponse.value = token;
-        });
-    });
-  }
+  
   
   $('.slick_tintuc').slick({
       lazyLoad: 'ondemand',
@@ -160,6 +177,20 @@ $(document).ready(function() {
       arrows:true,
       centerMode:false,
       dots:false,
+      draggable:true,
+      mobileFirst:true
+  });
+  $('.tutorials-list-slide').slick({
+      lazyLoad: 'ondemand',
+      infinite: true,
+      accessibility:true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay:true,
+      autoplaySpeed:3000,
+      arrows:true,
+      centerMode:false,
+      dots:true,
       draggable:true,
       mobileFirst:true
   });

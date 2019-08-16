@@ -187,6 +187,8 @@ function save_item(){
 		$data['id_cat'] = (int)$_POST['id_cat'];
 		$data['tenkhongdau'] = changeTitle($_POST['ten']);
 		$data['stt'] = $_POST['stt'];
+		$data['ngayhethan'] = $_POST['ngayhethan'];
+		$data['khuvuc'] = $_POST['khuvuc'];
 		$data['hienthi'] = isset($_POST['hienthi']) ? 1 : 0;
 		$data['noibat'] = isset($_POST['noibat']) ? 1 : 0;
 		$data['ngaysua'] = time();		
@@ -279,6 +281,8 @@ function save_item(){
 		$data['id_cat'] = (int)$_POST['id_cat'];
 		$data['tenkhongdau'] = changeTitle($_POST['ten']);
 		$data['stt'] = $_POST['stt'];
+		$data['ngayhethan'] = $_POST['ngayhethan'];
+		$data['khuvuc'] = $_POST['khuvuc'];
 		$data['tag'] = $_POST['tag'];
 		$data['hienthi'] = isset($_POST['hienthi']) ? 1 : 0;
 		$data['noibat'] = isset($_POST['noibat']) ? 1 : 0;

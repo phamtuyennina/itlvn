@@ -36,7 +36,7 @@
        <div id="info" class="tab_content"> 
 			
         	        
-        <div class="formRow">
+        <div class="formRow <?php if($_REQUEST['type']=='brochure'){echo 'none';} ?>">
             <label>Link liên kết: </label>
             <div class="formRight">
                 <input type="text" id="price" name="link" value="<?=@$item['link']?>"  title="Nhập link liên kết cho hình ảnh" class="tipS" />
@@ -44,17 +44,22 @@
             <div class="clear"></div>
         </div>              
 		<div class="formRow">
-			<label>Upload hình ảnh:</label>
+			<label>Upload:</label>
 			<div class="formRight">
             					<input type="file" id="file" name="file" />
 				<img src="./images/question-button.png" alt="Upload hình" class="icon_question tipS" original-title="Tải hình ảnh (ảnh JPEG, GIF , JPG , PNG)">
-                <div class="note">  <?php if($_REQUEST['type']=='slider')echo 'Width:1000px &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Height:400px '; ?> <?=_format_duoihinh_l?> </div>
+                <div class="note">  <?php if($_REQUEST['type']=='slider')echo 'Width:1000px &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Height:400px '; ?>
+                <?php 
+                    $a=$_REQUEST['type'];
+                    if($a!='brochure'){$b=_format_duoihinh_l;}else{$b=_format_duoitailieu;}
+                ?>
+                 <?=$b?> </div>
 			</div>
 			<div class="clear"></div>
          </div> 
-          
+         <?php if($_REQUEST['type']!='brochure'){ ?> 
         <div class="formRow">           
-            <label>Hình ảnh hiện tại: </label>      
+            <label>Hiện tại: </label>      
             <div class="formRight">          
             <img src="<?=_upload_hinhanh.$item['photo']?>"  alt="NO PHOTO" style="max-height:100px; max-width:800px;" />
             <br />
@@ -62,7 +67,17 @@
             
             <div class="clear"></div>
 		</div>
-       
+       <?php }else{?>
+          <div class="formRow">           
+            <label>Hiện tại: </label>      
+            <div class="formRight">          
+            <a href="<?=_upload_hinhanh.$item['photo']?>" target="_blank"><?=$item['photo']?></a>
+            <br />
+            </div>
+            
+            <div class="clear"></div>
+    </div>
+       <?php }?>
        <?php if($_REQUEST['type']=='letruot') { ?> 
         <div class="formRow">           
             <label>Vị trí: </label>      

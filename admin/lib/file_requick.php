@@ -40,6 +40,54 @@
 			$source = "gioithieu";
 			$template = "gioithieu";
 			break;
+
+		case 'chinh-sach-bao-mat':
+			$type = "chinh-sach-bat-mat";
+			$title = _chinhsachbaomat;
+			$title_cat = _chinhsachbaomat;
+			$bread->add($title,$com.".html");		
+			$source = "about";
+			$template = "about";
+			break;
+
+		case 'co-hoi-nghe-nghiep':
+			$type = "co-hoi-nghe-nghiep";
+			$type1 = "tuyen-dung";
+			$title = _cohoinghenghiep;
+			$title_cat = _cohoinghenghiep;
+			$bread->add($title,$com.".html");		
+			$source = "tuyendung";
+			$template = "tuyendung_about";
+			break;
+
+		case 'gia-nhap-doi-ngu':
+			$type = "gia-nhap-doi-ngu";
+			$type1 = "tuyen-dung";
+			$title = _gianhapdoingu;
+			$title_cat = _gianhapdoingu;
+			$bread->add($title,$com.".html");		
+			$source = "tuyendung";
+			$template = "tuyendung_about";
+			break;
+
+		case 'moi-truong-lam-viec':
+			$type = "moi-truong-lam-viec";
+			$type1 = "tuyen-dung";
+			$title = _moitruonglamviec;
+			$title_cat = _moitruonglamviec;
+			$bread->add($title,$com.".html");		
+			$source = "tuyendung";
+			$template = "tuyendung_about";
+			break;
+
+		case 'dieu-khoan-su-dung':
+			$type = "dieu-khoan-su-dung";
+			$title = _dieukhoansudung;
+			$title_cat = _dieukhoansudung;
+			$bread->add($title,$com.".html");		
+			$source = "about";
+			$template = "about";
+			break;
 		case '':
 		case 'index':
 			$title = $company['title'];
@@ -54,8 +102,10 @@
 		
 		case 'tin-tuc':
 			$type = "tin-tuc";
-			$title = _tintuc;
-			$title_cat = _tintuc;
+			$title = _tintuctruyenthong;
+			$title_cat = _tintuctruyenthong;
+			$pageSize1=8;
+			$bread->add($title,$com.".html");		
 			$source = "news";
 			break;
 
@@ -107,11 +157,13 @@
 			break;
 			
 		case 'tuyen-dung':
-			$type = "tuyendung";
+			$type = "tuyen-dung";
+			$type1 = "tuyen-dung";
 			$title = _tuyendung;
 			$title_cat = _tuyendung;
+			$pageSize1=20000;
 			$source = "news";
-			$template = isset($_GET['id']) ? "news_detail" : "news";
+			$template = isset($_GET['id']) ? "tuyendung_detail" : "tuyendung";
 			break;
 			
 		case 'lien-he':
@@ -122,61 +174,6 @@
 			$template = "contact";
 			break;
 
-		case 'tim-kiem':
-			$type = "sanpham";
-			$title = _ketquatimkiem;
-			$title_cat = _ketquatimkiem;
-			$source = "search";
-			$template = "product";
-			break;
-						
-		case 'san-pham':
-			$type = "sanpham";
-			$title = _sanpham;
-			$title_cat = _sanpham;
-			$source = "product";
-			$template = isset($_GET['id']) ? "product_detail" : "product";
-			break;
-			
-		case 'video':
-			$title = 'Video Clip';
-			$title_cat = "Video Clip";
-			$source = "video";
-			$template = "video";
-			break;
-		
-		case 'gio-hang':
-			$type = "giohang";
-			$title = _giohang;
-			$title_cat = _giohang;
-			$source = "giohang";
-			$template = "giohang";
-			break;	
-			
-		case 'thanh-toan':
-			$type = "thanhtoan";
-			$title = _thanhtoan;
-			$title_cat = _thanhtoan;
-			$source = "thanhtoan";
-			$template = "thanhtoan";
-			break;
-			
-		case 'dang-ky':
-			$type = "dangky";
-			$title = _dangky;
-			$title_cat = _dangky;
-			$source = "dangky";
-			$template = "dangky";
-			break;
-	
-		case 'dang-xuat':
-			logout();
-			break;
-				
-		case 'add-user':
-			$source = "user";
-			$template = "user";
-			break;
 			
 		case 'ngonngu':
 			if(isset($_GET['lang']))

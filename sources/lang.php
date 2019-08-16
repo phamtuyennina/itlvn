@@ -27,6 +27,35 @@
 @define ('_boi','bởi');
 @define ('_tinmoinhat','Tin mới nhất');
 @define ('_taibrochure','Tải Brochure');
+@define ('_luachondichvu','Lựa chọn địa chỉ');
+@define ('_guithongtinyeucaudichvuthanhcong','Gửi thông tin yêu cầu dịch vụ thành công.');
+@define ('_guithongtinyeucaudichvuthatbai','Gửi thông tin yêu cầu dịch vụ thất bại.');
+@define ('_gianhapdoingu','Gia nhập đội ngũ getss');
+@define ('_moitruonglamviec','Môi trường lại việc');
+@define ('_thongtintuyendung','Thông tin tuyển dụng');
+@define ('_thongtinkhac','Thông tin khác');
+@define ('_tatca','Tất cả');
+@define ('_vitri','Vị trí');
+@define ('_nganhnghe','Nghành nghề');
+@define ('_khuvuc','Khu vực');
+@define ('_ngayhethan','Ngày hết hạn');
+@define ('_apply','Gửi');
+@define ('_applynow','Đăng ký ngay');
+
+@define ('_tencuaban','Họ và tên');
+@define ('_gioitinhcuaban','Giới tính của bạn');
+@define ('_nu','Nữ');
+@define ('_nam1','Nam');
+@define ('_emailcuaban','Email của bạn');
+@define ('_dienthoaicuaban','Số điện thoại');
+@define ('_ngaysinh','Ngày sinh');
+@define ('_motabanthan','Mô tả bản thân');
+@define ('_tailen','Tải lên');
+@define ('_tailenCV','Tải lên CV');
+@define ('_vuilongdienfull','Vui lòng điền đầy đủ thông tin');
+
+
+
 
 
 

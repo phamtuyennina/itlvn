@@ -6,9 +6,53 @@
 @define ('_khuvuc','REGIONAL NETWORK');
 @define ('_khachhang','Customer Center');
 @define ('_tintuctruyenthong','News & Media');
+@define ('_xemthem', 'See more');
+@define ('_chinhsachbaomat', 'Privacy policy');
+@define ('_dieukhoansudung', 'Terms of use');
+@define ('_ketnoivoichungtoi', 'Connect with us');
+@define ('_yeucaudichvu', 'Service request');
+@define ('_tracuuvandon', 'Look up bill of lading');
+@define ('_huongdanvahoidap', 'Guide & FAQ');
+@define ('_phanhoikhachhang', 'Customer feedback');
+@define ('_mangluoikhuvuc', 'Regional network');
+@define ('_tracuuvandon', 'Look up bill of lading');
+@define ('_huongdanhoidap', 'Instructions & FAQs');
+@define ('_phanhoikhachhang', 'Customer feedback');
+@define ('_luachondichvu', 'Choice of services');
+@define ('_diachiemal', 'Email Address');
+@define ('_sodienthoai', 'Phone number');
+@define ('_mota', 'Description');
+@define ('_nhapthongtinmotavekienhang', 'Enter description of the package');
+@define ('_cauhoithuonggap', 'Frequently Asked Questions');
+@define ('_boi', 'by');
+@define ('_tinmoinhat', 'Latest news');
+@define ('_taibrochure', 'Download Brochure');
+@define ('_luachondichvu', 'Address selection');
+@define ('_guithongtinyeucaudichvuthanhcong', 'Send information requires service successfully.');
+@define ('_guithongtinyeucaudichvuthatbai', 'Send information requires service failed.');
+@define ('_gianhapdoingu', 'Joining team');
+@define ('_moitruonglamviec', 'Environment again');
+@define ('_thongtintuyendung', 'Employment information');
+@define ('_thongtinkhac', 'Other information');
+@define ('_tatca', 'All');
+@define ('_vitri', 'Location');
+@define ('_nganhnghe', 'Nghành nghiệp');
+@define ('_khuvuc', 'Area');
+@define ('_ngayhethan', 'Expiry date');
+@define ('_apply', 'Submit');
+@define ('_applynow', 'Register now');
 
-
-
+@define ('_tencuaban', 'Full name');
+@define ('_gioitinhcuaban', 'Your gender');
+@define ('_nu', 'Female');
+@define ('_nam1', 'Nam');
+@define ('_emailcuaban', 'Your email');
+@define ('_dienthoaicuaban', 'Phone number');
+@define ('_ngaysinh', 'Birthday');
+@define ('_motabanthan', 'Describe yourself');
+@define ('_tailen', 'Upload');
+@define ('_tailenCV', 'Upload CV');
+@define ('_vuilongdienfull', 'Please complete the information');
 
 
 @define ('_gioithieu','Introduction');

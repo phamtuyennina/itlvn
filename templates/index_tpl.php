@@ -34,7 +34,7 @@
                 <?php }?>
             </div>
             <div class="see-all-link">
-                <a href="/business-solutions/aviation-services.html"><?=_xemtatca?> <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                <a href="giai-phap-kinh-doanh/<?=$giaiphap_danhmuc[0]['tenkhongdau']?>"><?=_xemtatca?> <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
             </div>
         </div>
     </div>
